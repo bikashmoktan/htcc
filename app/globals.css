@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom properties for theming */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fff8e1; /* Light saffron color */
+  --foreground: #6a4c93; /* Deep purple for text */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a; /* Dark background */
+    --foreground: #f0e68c; /* Light color for dark mode */
   }
 }
 
+/* Apply the custom properties to the body */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif; /* Change to your preferred font */
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif; /* Use a serif font for headings */
+}
+
+a {
+  color: #ff5722; /* Coral color for links */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff8c00; /* Lighter coral on hover */
 }
